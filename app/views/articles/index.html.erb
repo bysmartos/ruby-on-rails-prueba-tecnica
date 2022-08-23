@@ -1,15 +1,17 @@
-<h1>Articles</h1>
+<div class="center-container" style="margin-top: 6vh;">
+  <h1 class="article-list-title white-title">Articles</h1>
 
-Our blog has <%= Article.public_count %> articles and counting!
+  <p class="subtitle">My blog has <%= Article.public_count %> articles and counting!</p>
+  
 
-<ul>
-  <% @articles.each do |article| %>
-    <% unless article.archived? %>
-      <li>
-        <%= link_to article.title, article %>
-      </li>
+  <button class="styled-button" style="margin-bottom: 1rem"><%= link_to "New article", new_article_path, {:style=>'color:#000; text-decoration: none; font-weight: bold', :class => "css_class"} %></button>
+    <% @articles.each do |article| %>
+      <% unless article.archived? %>
+        <li style="margin-bottom: 1rem">
+          <h1><%= article.title %></h1>
+          <%= link_to "Show this article", article, {:style=>'color:#9e35db; text-decoration: none;', :class => "css_class"} %>
+        </li>
+      <% end %>
     <% end %>
-  <% end %>
-</ul>
 
-<%= link_to "New Article", new_article_path %>
+</div>

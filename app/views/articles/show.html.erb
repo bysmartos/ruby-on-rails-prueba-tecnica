@@ -1,14 +1,20 @@
-<h1><%= @article.title %></h1>
+<div class="center-container" style="margin-top: 6vh;">
+<h1 class="white-title"><%= @article.title %></h1>
 
-<p><%= @article.body %></p>
+<p style=" font-size:1.4rem; text-align:center; margin-right: 2rem; margin-left: 2rem;"><%= @article.body %></p>
 
-<ul>
-  <li><%= link_to "Edit", edit_article_path(@article) %></li>
-  <li><%= button_to "Destroy", article_path(@article), method: :delete %></li>
-</ul>
+<div>
+  <%= link_to "Edit", edit_article_path(@article) %> |
+  <%= link_to "Back to articles", articles_path(@article) %>
 
-<h2>Comments</h2>
+  <%= button_to "Destroy", article_path(@article), method: :delete %>
+</div>
+
+ <h2 class="subtitle" >Comments:</h2>
+ <p style=" font-size:1.4rem">The article has <%= Comment.public_count %> comments</p>
 <%= render @article.comments %>
 
-<h2>Add a comment:</h2>
+<h2 class="subtitle">Add a comment:</h2>
 <%= render 'comments/form' %>
+
+</div>

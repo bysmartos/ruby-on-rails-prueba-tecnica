@@ -1,6 +1,9 @@
 
-<div class="container">
-  <h1>My personal Home Page</h1>
-  <p>You can read more about me, or checkout my blog</p>
-  <%= link_to "About me!", about_path %>
-</div>
+<div class="center-container" style="margin-top: 26vh;">
+  <h1 class="white-title main-title">My personal Home Page</h1>
+  <p class="subtitle">You can read more about me, or checkout my blog</p>
+  <div class="d-flex flex-wrap justify-content-center ">
+    <button class="styled-button"  style="margin-right:2rem;"><%= link_to "About me!", about_path,  {:style=>'color:#000; text-decoration: none; font-weight: bold', :class => "css_class"} %></button>
+    <button class="styled-button"><%= link_to "Blog", articles_path, {:style=>'color:#000; text-decoration: none; font-weight: bold', :class => "css_class"} %></button>
+  </div>
+</div>  

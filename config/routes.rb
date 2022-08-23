@@ -2,7 +2,8 @@
   # Defines the root path route ("/")
   # root "articles#index"
   Rails.application.routes.draw do
-    root "articles#index"
+    get 'about', to: 'pages#about'
+    root "pages#home"
   
     resources :articles do
       resources :comments

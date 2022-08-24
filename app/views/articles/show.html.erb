@@ -1,5 +1,6 @@
 <div class="center-container" style="margin-top: 6vh;">
 <h1 class="white-title"><%= @article.title %></h1>
+<h6><%= pluralize(@article.views, "view")%></h6>
 
 <p style=" font-size:1.4rem; text-align:center; margin-right: 2rem; margin-left: 2rem;"><%= @article.body %></p>
 

@@ -13,7 +13,7 @@
 </div>
 
  <h2 class="subtitle" >Comments:</h2>
- <p style=" font-size:1.4rem">The article has <%= Comment.public_count %> comments</p>
+ <p style=" font-size:1.4rem">The article has <%= @article.comments.public_count %> comments</p>
 <%= render @article.comments %>
 
 <h2 class="subtitle">Add a comment:</h2>
